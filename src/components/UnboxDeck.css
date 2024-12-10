@@ -1,0 +1,248 @@
+/* Main container styles */
+.unbox-deck-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  font-family: "Arial", sans-serif;
+}
+
+/* Deck selection container styles */
+.deck-selection-container {
+  text-align: center;
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.deck-selection-container:hover {
+  transform: scale(1.05);
+}
+
+.deck-options {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* Card pack button styles to resemble the size of an actual card */
+.deck-button {
+  width: 180px; /* Width close to an actual Pokémon card */
+  height: 250px; /* Height close to an actual Pokémon card */
+  padding: 10px 15px;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 15px; /* Slight rounding for card pack appearance */
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Shine effect on hover */
+.deck-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Shimmer effect - sheer line on hover only */
+.deck-button:hover::before {
+  content: "";
+  position: absolute;
+  top: -150%;
+  left: -150%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(0deg);
+  animation: shimmer 1.5s ease-in-out;
+  pointer-events: none;
+}
+
+/* Keyframes for shimmer animation */
+@keyframes shimmer {
+  0% {
+    transform: translate(-150%, -150%);
+  }
+  100% {
+    transform: translate(150%, 150%);
+  }
+}
+
+/* Green Emerald Button */
+.green-emerald {
+  background: linear-gradient(145deg, #009933, #66ff99);
+  background-clip: padding-box;
+  border-image: linear-gradient(45deg, #006600, #66ff99) 1;
+}
+
+.green-emerald::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), transparent);
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+/* Purple Emerald Button (Amethyst) */
+.purple-emerald {
+  background: linear-gradient(145deg, #7b1fa2, #e1bee7);
+  background-clip: padding-box;
+  border-image: linear-gradient(45deg, #4a0072, #e1bee7) 1;
+}
+
+.purple-emerald::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), transparent);
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+/* Diamond Button */
+.diamond {
+  background: linear-gradient(145deg, #00bcd4, #e0f7fa);
+  background-clip: padding-box;
+  border-image: linear-gradient(45deg, #0288d1, #e0f7fa) 1;
+}
+
+.diamond::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), transparent);
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+/* Card Slider and Arrow Styling */
+.deck-slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  overflow: hidden;
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.arrow {
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: transform 0.2s, color 0.3s;
+  color: #666;
+  z-index: 1;
+}
+
+.arrow:hover {
+  transform: scale(1.2);
+  color: #333;
+}
+
+/* Deck Slider Styling */
+.deck-slider {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+  justify-content: center;
+  transition: transform 0.5s ease;
+}
+
+.card-slide {
+  min-width: 300px;
+  margin: 0 20px;
+  transition: transform 0.5s ease-in-out, opacity 0.5s;
+}
+
+.card-slide.active {
+  transform: scale(1.15);
+  opacity: 1;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+
+.card-slide.inactive {
+  transform: scale(0.85);
+  opacity: 0.5;
+  z-index: 1;
+}
+
+/* Save Deck Container */
+.save-deck-container {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.deck-name-input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1.1rem;
+}
+
+.button {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background: #ff6347; /* Orange color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.button.save-button {
+  background-color: #2196f3;
+}
+
+.button:hover {
+  background-color: #45a049;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.button.save-button:hover {
+  background-color: #1976d2;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}

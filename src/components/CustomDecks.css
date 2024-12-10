@@ -1,0 +1,148 @@
+.custom-decks-container {
+  margin: 20px;
+  text-align: center; /* Center align the content */
+  overflow-x: hidden; /* Prevent horizontal scroll on the page */
+}
+
+.create-deck {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.deck-input {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.deck-card {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px; /* Set max-width to prevent card expansion from making it wider */
+  margin-left: auto; /* Center deck cards */
+  margin-right: auto; /* Center deck cards */
+}
+
+.deck-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.edit-deck-name-input {
+  padding: 5px;
+  margin-right: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.deck-count {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.create-button {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.edit-button {
+  background-color: #f0ad4e;
+  color: #fff;
+}
+
+.delete-button {
+  background-color: #d9534f;
+  color: #fff;
+}
+
+.expand-button {
+  background-color: #5bc0de;
+  color: #fff;
+}
+
+.save-button {
+  background-color: #5cb85c;
+  color: #fff;
+}
+
+.deck-details {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.pokemon-cards-scroll-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center; /* Center align the cards */
+}
+
+.scroll-button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+  color: #007bff;
+  transition: transform 0.2s;
+}
+
+.scroll-button:hover {
+  transform: scale(1.1);
+}
+
+.pokemon-cards-scroll-wrapper {
+  overflow: hidden; /* Ensure that there's no unwanted scrolling */
+  width: 95%; /* Set the width to 85% of its parent container */
+  max-width: 800px; /* Set max width to ensure no unintended overflow */
+}
+
+.pokemon-cards-container {
+  display: flex;
+  gap: 15px;
+  padding: 10px 0;
+  min-width: fit-content;
+}
+
+.mini-pokemon-card {
+  min-width: 150px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.delete-card-button-container {
+  margin-top: 5px;
+}
+
+.delete-pokemon-button {
+  background-color: #d9534f;
+  color: white;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.delete-pokemon-button:hover {
+  background-color: #c9302c;
+  transform: scale(1.1);
+}

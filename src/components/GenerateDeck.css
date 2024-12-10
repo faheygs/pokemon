@@ -1,0 +1,131 @@
+/* General Generate Deck Container */
+.generate-deck-container {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* Generate Deck Button */
+.generate-button {
+  background: #ff6347;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.generate-button:hover {
+  background: #e55342;
+  transform: translateY(-2px);
+}
+
+/* Save Deck Container */
+.save-deck-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.deck-name-input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+}
+
+.save-button {
+  padding: 10px 20px;
+  background: #008000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.save-button:hover {
+  background: #006400;
+  transform: translateY(-2px);
+}
+
+/* Deck Slider Container */
+.deck-slider-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  overflow: hidden;
+}
+
+/* Arrow Styling */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s;
+  z-index: 20;
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+.arrow:hover {
+  color: #ff9900;
+}
+
+/* Deck Slider Wrapper */
+.deck-slider-wrapper {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Deck Slider */
+.deck-slider {
+  display: flex;
+  align-items: center;
+  transition: transform 0.5s ease-in-out;
+  width: fit-content;
+  position: relative;
+}
+
+/* Card Slide */
+.card-slide {
+  flex-shrink: 0;
+  width: 240px;
+  margin: 0 10px;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.card-slide.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+
+.card-slide.inactive {
+  opacity: 0.5;
+  transform: scale(0.85);
+  z-index: 1;
+}

@@ -1,0 +1,185 @@
+/* Container for the Generate Single Card */
+.generate-single-card-container {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* Generate Card Button */
+.generate-button {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background: #ff6347; /* Orange color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.generate-button:hover {
+  background: #e55342;
+  transform: translateY(-2px);
+}
+
+/* Card Container */
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Card Preview */
+.card-preview {
+  margin-bottom: 20px;
+  width: 240px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Add to Deck Container */
+.add-to-deck-container {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 750px;
+  text-align: center;
+}
+
+.add-to-deck-container h4 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Deck Item Styling */
+.deck-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Mini Cards */
+.mini-cards {
+  display: flex;
+  gap: 5px;
+}
+
+.mini-card {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.mini-card:hover {
+  transform: scale(1.2);
+}
+
+/* Button Styling for Adding Cards */
+.add-button {
+  padding: 8px 15px;
+  background: #008000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.add-button:hover {
+  background: #006400;
+  transform: translateY(-2px);
+}
+
+/* No Decks Message */
+.no-decks-message {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 10px;
+}
+
+.evolution-buttons.above-card {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.evolve-button,
+.devolve-button {
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+/* More Cards Badge - Orange and Square Version */
+.more-cards-badge {
+  background: linear-gradient(135deg, #ff8c00, #ff6347);
+  color: white;
+  border-radius: 10px; /* Soft corners for a square shape */
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 4px 15px rgba(255, 100, 30, 0.5),
+    0 0 20px rgba(255, 140, 0, 0.3);
+  position: relative;
+  margin-left: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.more-cards-badge:before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+  transform: rotate(45deg);
+  animation: shine 3s infinite ease-in-out;
+}
+
+.more-cards-badge:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 20px rgba(255, 100, 30, 0.6),
+    0 0 25px rgba(255, 140, 0, 0.4);
+}
+
+@keyframes shine {
+  0% {
+    transform: rotate(45deg) translate(-150%, -150%);
+  }
+  50% {
+    transform: rotate(45deg) translate(150%, 150%);
+  }
+  100% {
+    transform: rotate(45deg) translate(-150%, -150%);
+  }
+}
